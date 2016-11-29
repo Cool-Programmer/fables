@@ -1,0 +1,7 @@
+.comment
+  %p= comment.comment
+  %p
+    By
+    = comment.user.email
+  =link_to 'Delete Reply', [comment.post, comment], method: :delete
+  =link_to 'Edit Reply', edit_post_comment_path(comment.post, comment)

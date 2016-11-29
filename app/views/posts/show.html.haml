@@ -13,11 +13,11 @@
       %h3 Add a Reply
       = render 'comments/form'
 
-
-- if @post.user == current_user
-  = link_to 'Edit', edit_post_path, class: 'btn btn-default'
-  = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }
--else
-  %p
-    You need to sign up or log in in order to create new post or comment on them.
+  .links
+  - if @post.user == current_user
+    = link_to 'Edit', edit_post_path, class: 'btn btn-default'
+    = link_to 'Delete', @post, method: :delete, data: { confirm: 'Are you sure?' }
+  -else
+    %p
+      You need to sign up or log in in order to create new post or comment on them.
 

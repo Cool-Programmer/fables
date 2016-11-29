@@ -1,2 +1,6 @@
-%h1
-  index#posts
+- @posts.each do |post|
+  %h1= link_to post.title, post
+  %p
+    Published at
+    = time_ago_in_words(post.created_at)
+    ago

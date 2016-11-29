@@ -45,11 +45,13 @@ body
   background: #fff;
   #logo{
     float: left;
-    p{
+    a{
       text-transform: capitalize;
       font-wieght: 700;
       letter-spacing: -1px;
       font-size: 1.2rem;
+      text-decoration: none;
+      color: #397cac;
     }
   }
   #buttons{
@@ -89,5 +91,24 @@ body
         font-size: 1.25rem;
       }
     }
+  }
+}
+
+#post_content
+{
+  background: #fff;
+  padding: 2em 5%;
+  border-radius: .5em;
+  h1{
+    font-wieght: 100;
+    font-size: 2em;
+    color: #397cac;
+    margin-top: 0;
+  }
+  p{
+    font-size: 0.9rem;
+    color: #b2bac2;
+    font-wieght: 100;
+    line-height: 1.5em;
   }
 }

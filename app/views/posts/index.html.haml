@@ -5,4 +5,5 @@
       %p.date
         Published
         = time_ago_in_words(post.created_at)
-        ago
+        ago by
+        = post.user.email

@@ -2,13 +2,24 @@
 %html
   %head
     %title
-      Forum
+      Fables
     = csrf_meta_tags
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+    %link{:rel => "stylesheet", :href => "https://fonts.googleapis.com/css?family=Lato"}/
+    %link{:rel => "stylesheet", :href => "https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"}/
   %body
-    %p.notice
-      = notice
-    %p.alert
-      = alert
-    = yield
+    %header.main_header.clearfix
+      .wrapper
+        #logo
+          %p Fables
+        #buttons
+          = link_to 'New Post', new_post_path
+
+    .wrapper
+      %p.notice
+        = notice
+      %p.alert
+        = alert
+    .wrapper
+      = yield
